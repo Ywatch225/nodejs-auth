@@ -49,3 +49,31 @@ exports.inscription = (req, res) => {
 }
 
 
+exports.connexion= async (req,res)=>{
+    console.log(req.body);
+    try {
+         const {email , password} = req.body;
+
+         if(!email || !password) {
+             return res.status(400).render('login',{
+                 message :'Veuillez entrer un email et un mot de passe'
+             })
+         }
+
+         db.query('SELECT * FROM users WHERE email=?',[email], async(error,result)=>{
+            console.log(result);
+             
+            if(!result || !(await bcrypt.compare(password,result[0].password)))
+             res.status(401).render('connexion',{
+                 message:'Email ou mot de passe incorrect',
+             }) 
+            else{
+                res.status(200).redirect('/dashboard');
+            }
+         })
+
+    } catch (error){
+        console.log(error);
+        
+    }
+}

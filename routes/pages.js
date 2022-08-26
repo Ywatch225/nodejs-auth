@@ -10,6 +10,13 @@ router.get('/inscription', (req, res) =>{
     res.render('inscription', {message:''});
 });
 
+router.get('/connexion', (req, res) =>{
+    res.render('connexion', {message:''});
+});
+
+router.get('/dashboard', (req, res) =>{
+    res.render('dashboard', {message:''});
+});
 
 
 module.exports = router;

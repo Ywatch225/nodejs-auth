@@ -52,6 +52,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json()); 
 
 //definir les routes
+
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
 
