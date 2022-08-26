@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-auth",
+  "version": "1.0.0",
+  "description": "authentification nodejs basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ywatch225/nodejs-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ywatch225/nodejs-auth/issues"
+  },
+  "homepage": "https://github.com/Ywatch225/nodejs-auth#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "html": "^1.0.0",
+    "mysql": "^2.18.1"
+  }
+}
