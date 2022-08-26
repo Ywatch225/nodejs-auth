@@ -1,0 +1,14 @@
+body{
+    background-color: gainsboro;
+}
+.nav{
+    background-color: orange;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a{
+    color: white;
+    font-weight: bold;
+}
